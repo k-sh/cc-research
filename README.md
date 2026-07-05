@@ -75,27 +75,40 @@ your-project/
 
 パイプラインの依存関係:
 
-```text
-01 planning
-     │
-     ▼
-02 literature-review ──▶ 03 gap-analysis
-     │
-     ▼
-04 method-design ──▶ 05 patent-search ──▶ 06 algorithm-design
-     │
-     ▼
-07 implementation
-     │
-     ▼
-08 evaluation ──▶ 09 ablation-study ──▶ 10 reproducibility
-     │
-     ▼
-11 paper-writing ──┬──▶ 12 slide-generation
-                    └──▶ 13 review-response
-                              │
-                              ▼
-                    14 release-preparation
+```mermaid
+flowchart TD
+    subgraph phase1["Phase 1: Planning"]
+        P01["01 planning"]
+    end
+    subgraph phase2["Phase 2: Survey"]
+        P02["02 literature-review"]
+        P03["03 gap-analysis"]
+    end
+    subgraph phase3["Phase 3: Design"]
+        P04["04 method-design"]
+        P05["05 patent-search"]
+        P06["06 algorithm-design"]
+    end
+    subgraph phase4["Phase 4: Development"]
+        P07["07 implementation"]
+    end
+    subgraph phase5["Phase 5: Validation"]
+        P08["08 evaluation"]
+        P09["09 ablation-study"]
+        P10["10 reproducibility"]
+    end
+    subgraph phase6["Phase 6: Publication"]
+        P11["11 paper-writing"]
+        P12["12 slide-generation"]
+        P13["13 review-response"]
+    end
+    subgraph phase7["Phase 7: Release"]
+        P14["14 release-preparation"]
+    end
+
+    P01 --> P02 --> P03 --> P04 --> P05 --> P06 --> P07 --> P08 --> P09 --> P10 --> P11
+    P11 --> P12
+    P11 --> P13 --> P14
 ```
 
 ## 使用モデルとコスト最適化
