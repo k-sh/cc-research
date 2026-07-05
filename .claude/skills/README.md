@@ -23,6 +23,11 @@ Phase 7. Release      research-14-release-preparation
 - 成果物はリポジトリ直下の `research/` `paper/` `presentation/` `release/` に Markdown で保存する。
 - 進行状況は `research/STATUS.md` に集約する(各スキルが完了時に追記)。
 - 後段のスキルは開始時に `research/STATUS.md` と前段の成果物を読んでから作業する。
+- **サブエージェント・並列ジョブに成果物ファイルを直接書き込ませない。** 複数の書き手が同一ファイルへ
+  同時に書き込むと、互いの変更を上書きして内容が消失・破損する(競合)。サブエージェントには
+  調査・実行結果を回答テキスト(またはジョブごとに独立したログファイル)として返させ、
+  `research/` 等へのファイル書き込みは常にスキルの実行主体が単独・逐次で行う
+  (該当箇所: `research-02-literature-review`、`research-08-evaluation`、`research-09-ablation-study`)。
 
 ## 使用モデル(コスト最適化)
 

@@ -31,6 +31,11 @@ model: sonnet
 
 - 極小データでのドライランで配線を確認してから本実験を回す
 - 長時間ジョブは Bash の `run_in_background` で実行し、途中経過を監視する
+- **複数条件・複数シードを並行実行する場合、各ジョブの出力先は条件ごとに別ファイル
+  (例: `research/logs/seed{N}-{condition}.log`)にする。** 複数のバックグラウンドジョブが
+  `research/experiment-results.md` に同時に追記すると、書き込みが競合して内容が消失・破損する。
+  `research/experiment-results.md` への集約は、各ジョブの完了を確認したうえで自分(本体)が
+  一つずつ読み取って書き足す形にする(並行書き込みをさせない)
 - 生の結果(全シード・全条件)を `research/experiment-results.md` に追記していく。失敗した実行も原因とともに記録する
 
 ### 3. 統計解析と可視化
