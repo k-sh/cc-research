@@ -10,7 +10,8 @@ model: haiku
 
 ## 前提
 
-開始時に `research/STATUS.md`・`research/experiment-results.md`・`research/implementation-plan.md` を読む。
+開始時に `research/STATUS.md`・`research/experiment-results.md`・`research/implementation-plan.md`・
+`research/code-review-log.md`(あれば)を読む。
 実際の環境情報はファイルの記憶に頼らず、コマンドを実行して現物から取得する。
 
 ## 進め方
@@ -46,7 +47,9 @@ model: haiku
 ### 4. Docker 方針とチェックリスト
 
 - Dockerfile 作成方針(ベースイメージ、CUDA バージョン、依存の入れ方)。要望があれば Dockerfile 自体も作成する
-- 再現性チェックリスト: 環境固定 / シード固定 / データ入手可能 / 設定と結果の対応 / 1コマンド再現 / ライセンス確認 の各項目に ✅/⬜ を付ける
+- 再現性チェックリスト: 環境固定 / シード固定 / データ入手可能 / 設定と結果の対応 / 1コマンド再現 /
+  ライセンス確認 / **実験コードの独立レビュー実施(`code-review-log.md` の有無で確認)** の各項目に
+  ✅/⬜ を付ける。レビュー未実施の項目があれば、埋めるかリスクとして明記するかをユーザーに確認する
 
 ### 5. 出力
 
