@@ -1,18 +1,18 @@
 ---
 name: research-08-implementation-execution
-description: research-07-implementation が作成した tasks.md を実際にコードとして実装する。タスクごとに独立した実装者・レビューア・デバッガーのサブエージェントを使い分け、TDD(RED→GREEN)・境界チェック・統合検証(GO/NO-GO)で実装品質を担保する。ユーザーが「実装を進めたい」「タスクを実装したい」「コードを書きたい」「実装を実行したい」「タスクを消化したい」と言ったとき、または research-07-implementation の次のステップとして使うこと。
+description: research-07-implementation-plan が作成した tasks.md を実際にコードとして実装する。タスクごとに独立した実装者・レビューア・デバッガーのサブエージェントを使い分け、TDD(RED→GREEN)・境界チェック・統合検証(GO/NO-GO)で実装品質を担保する。ユーザーが「実装を進めたい」「タスクを実装したい」「コードを書きたい」「実装を実行したい」「タスクを消化したい」と言ったとき、または research-07-implementation-plan の次のステップとして使うこと。
 model: sonnet
 ---
 
 # 実装実行(Implementation Execution)
 
-`research-07-implementation` が作った `tasks.md` を、実際に動くコードにする。
+`research-07-implementation-plan` が作った `tasks.md` を、実際に動くコードにする。
 
 ## 前提
 
 開始時に `research/STATUS.md`・`research/tasks.md`・`research/implementation-plan.md`・
 `research/architecture.md`・`research/test-plan.md` を読む。`tasks.md` が無い場合は、
-先に `/research-07-implementation` の実行を提案する。`tasks.md` の `## Implementation Notes`
+先に `/research-07-implementation-plan` の実行を提案する。`tasks.md` の `## Implementation Notes`
 に既知のハマりどころが無いか確認する。
 
 ## 進め方

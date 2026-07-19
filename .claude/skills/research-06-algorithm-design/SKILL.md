@@ -27,7 +27,7 @@ model: opus
 
 見つかった場合、自分の判断で決め打ちして定式化を進めない。**具体的な選択肢(トレードオフ込み)を
 提示し、`AskUserQuestion` でユーザーにどの方針で進めるか確認する。** ここでのあいまいさは、
-後工程(`research-07-implementation` の詳細設計)にそのまま伝播し、実装段階で初めて発覚すると
+後工程(`research-07-implementation-plan` の詳細設計)にそのまま伝播し、実装段階で初めて発覚すると
 手戻りが大きい。
 
 ### 2. 数学的定式化
@@ -66,7 +66,7 @@ research/
 ### 7. 完了処理
 
 - `research/STATUS.md` を更新
-- 次のステップ `/research-07-implementation` を案内
+- 次のステップ `/research-07-implementation-plan` を案内
 
 ## 品質基準
 

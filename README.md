@@ -68,7 +68,7 @@ your-project/
 | 3. Design | [research-04-method-design](docs/skills/03-design.md) | 新手法の考案・比較・採用決定 |
 | | [research-05-patent-search](docs/skills/03-design.md) | 特許・知財調査 |
 | | [research-06-algorithm-design](docs/skills/03-design.md) | アルゴリズムとしての定式化 |
-| 4. Development | [research-07-implementation](docs/skills/04-development.md) | 実装計画・アーキテクチャ・タスク分解 |
+| 4. Development | [research-07-implementation-plan](docs/skills/04-development.md) | 実装計画・アーキテクチャ・タスク分解 |
 | | [research-08-implementation-execution](docs/skills/04-development.md) | タスクの実装実行・独立レビュー・統合検証 |
 | 5. Validation | [research-09-evaluation](docs/skills/05-validation.md) | 評価実験の設計・実施・分析 |
 | | [research-10-ablation-study](docs/skills/05-validation.md) | アブレーション・感度分析 |
@@ -95,7 +95,7 @@ flowchart TD
         P06["06 algorithm-design"]
     end
     subgraph phase4["Phase 4: Development"]
-        P07["07 implementation"]
+        P07["07 implementation-plan"]
         P08["08 implementation-execution"]
     end
     subgraph phase5["Phase 5: Validation"]
@@ -126,7 +126,7 @@ Sonnet、機械的な棚卸し作業には Haiku を割り当てています。
 | モデル | 該当スキル | 理由 |
 | --- | --- | --- |
 | **Opus** | 03 gap-analysis, 04 method-design, 06 algorithm-design, 12 paper-writing | 文献横断の統合・新手法の創出・数式の厳密さ・論文の論理構成など、品質が知能に強く依存する工程 |
-| **Sonnet** | 01 planning, 02 literature-review, 05 patent-search, 07 implementation, 08 implementation-execution, 09 evaluation, 10 ablation-study, 13 slide-generation, 14 review-response | 検索・整理・設計・実験実行など、構造化された作業が中心の工程 |
+| **Sonnet** | 01 planning, 02 literature-review, 05 patent-search, 07 implementation-plan, 08 implementation-execution, 09 evaluation, 10 ablation-study, 13 slide-generation, 14 review-response | 検索・整理・設計・実験実行など、構造化された作業が中心の工程 |
 | **Haiku** | 11 reproducibility, 15 release-preparation | 環境情報の棚卸しやテンプレート整備など、機械的な作業が中心の工程 |
 
 特定のスキルだけモデルを変えたい場合は、該当する `SKILL.md` の `model:` を書き換えてください。

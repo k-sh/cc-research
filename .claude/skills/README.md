@@ -9,7 +9,7 @@
 Phase 1. Planning     research-01-planning
 Phase 2. Survey       research-02-literature-review → research-03-gap-analysis
 Phase 3. Design       research-04-method-design → research-05-patent-search → research-06-algorithm-design
-Phase 4. Development  research-07-implementation → research-08-implementation-execution
+Phase 4. Development  research-07-implementation-plan → research-08-implementation-execution
 Phase 5. Validation   research-09-evaluation → research-10-ablation-study → research-11-reproducibility
 Phase 6. Publication  research-12-paper-writing → research-13-slide-generation / research-14-review-response
 Phase 7. Release      research-15-release-preparation
@@ -34,7 +34,7 @@ Phase 7. Release      research-15-release-preparation
   (2) 完成時のダミーデータ(成功するはずのケース/絶対に失敗するはずのケース)での妥当性検証、
   (3) 実データ適用後の結果妥当性レビュー、の3段階でレビューさせ、指摘があれば直して同じ段階を
   やり直してから先に進む(該当箇所: `research-09-evaluation`、`research-10-ablation-study`。
-  手順は各スキルの `references/code-review.md` を参照。`research-07-implementation` の設計に
+  手順は各スキルの `references/code-review.md` を参照。`research-07-implementation-plan` の設計に
   基づき実装に着手する場合や、他スキルの過程で結果に影響する実行可能なコードを書く場合も
   同様の考え方を適用する)。対象は結果を左右するコアロジックの新規作成・変更時に限り、瑣末な
   変更にまでフルの3段階を毎回回さない(実験1回あたり最大で数回分のサブエージェント起動が
@@ -50,7 +50,7 @@ Phase 7. Release      research-15-release-preparation
   同じ指摘で2回連続 reject されたら、3回目の場当たり的な修正の前に「デバッガー」役の独立
   サブエージェント(root cause 調査、最大2ラウンド)を挟んでから直す。「直った」「うまく
   いった」は記憶や以前の実行結果ではなく、その場で再実行した新しい証拠で宣言する。
-- **複数ステップからなる実装は一括で仕上げてから通しで確認しない。** `research-07-implementation`
+- **複数ステップからなる実装は一括で仕上げてから通しで確認しない。** `research-07-implementation-plan`
   でマイルストーンを `research/tasks.md` の具体的なタスク(ID・内容・Boundary・Depends・
   完了条件)にまで分解し、`## Implementation Notes` に横断的な学びを積み上げていく。各タスクは
   過去の会話コンテキストを持たない独立した実装者サブエージェントに委譲してよい(TDD の
@@ -69,7 +69,7 @@ Phase 7. Release      research-15-release-preparation
   実装のバグではなく手法自体の論理(アルゴリズム設計)に問題がある可能性を疑い、
   `research-04-method-design`・`research-06-algorithm-design` への差し戻しを検討する。
 - **設計時、仕様のあいまいさ・矛盾を自分の判断で決め打ちしない。** `research-06-algorithm-design`・
-  `research-07-implementation` は、詳細化に落とし込む前に参照する仕様書間(または同じ仕様書内)
+  `research-07-implementation-plan` は、詳細化に落とし込む前に参照する仕様書間(または同じ仕様書内)
   にあいまいな記述や矛盾がないかを確認する。見つかった場合は具体的な選択肢とトレードオフを提示し、
   `AskUserQuestion` でユーザーにどの方針で進めるか確認してから先に進む。放置すると後工程
   (実装実行・評価)でようやく発覚し、手戻りが大きくなる。
@@ -84,7 +84,7 @@ Phase 7. Release      research-15-release-preparation
 | research-04-method-design | opus | 新手法の創出は最も知能感度が高い工程 |
 | research-05-patent-search | sonnet | 検索とクレーム比較の構造化作業 |
 | research-06-algorithm-design | opus | 数学的定式化・計算量解析の厳密さが必要 |
-| research-07-implementation | sonnet | 設計文書の作成が中心 |
+| research-07-implementation-plan | sonnet | 設計文書の作成が中心 |
 | research-08-implementation-execution | sonnet | タスク実装の実行・レビュー委譲が中心 |
 | research-09-evaluation | sonnet | 実験実行・統計処理・レポート作成 |
 | research-10-ablation-study | sonnet | 同上 |

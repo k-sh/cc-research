@@ -1,14 +1,14 @@
 # Phase 4: Development
 
 アルゴリズム設計を、実装可能な詳細設計書とタスク一覧に落とし込み、それを実際にコードとして
-実装するフェーズです。「何をどう作るか決める」(research-07-implementation)と「実際に手を
+実装するフェーズです。「何をどう作るか決める」(research-07-implementation-plan)と「実際に手を
 動かして作る」(research-08-implementation-execution)を分けています。
 
-## research-07-implementation
+## research-07-implementation-plan
 
 | 項目 | 内容 |
 | --- | --- |
-| コマンド | `/research-07-implementation` |
+| コマンド | `/research-07-implementation-plan` |
 | 使用モデル | Sonnet |
 | 目的 | 実装計画・アーキテクチャ・モジュール構成・テスト計画・タスク分解を作成する(コードは書かない) |
 
@@ -67,7 +67,7 @@ research/
 ### いつ使うか
 
 - 「実装を進めたい」「タスクを実装したい」「コードを書きたい」「実装を実行したい」
-- `research-07-implementation` の次のステップとして
+- `research-07-implementation-plan` の次のステップとして
 
 ### 主な処理
 

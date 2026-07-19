@@ -14,7 +14,7 @@
 ### いつ使うか
 
 - 「実験したい」「評価したい」「ベースラインと比較したい」「統計解析したい」
-- `research-07-implementation` の次のステップとして
+- `research-07-implementation-plan` の次のステップとして
 
 ### 主な処理
 
