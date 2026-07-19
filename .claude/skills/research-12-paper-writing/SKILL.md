@@ -1,6 +1,6 @@
 ---
-name: research-11-paper-writing
-description: 研究成果の論文化。タイトル・Abstract・Introduction・Related Work・Method・Experiments・Results・Discussion・Conclusion・References・Appendix を Markdown 論文としてまとめる。ユーザーが「論文を書きたい」「論文化したい」「原稿をまとめたい」「アブストを書きたい」と言ったとき、または research-10-reproducibility の次のステップとして使うこと。
+name: research-12-paper-writing
+description: 研究成果の論文化。タイトル・Abstract・Introduction・Related Work・Method・Experiments・Results・Discussion・Conclusion・References・Appendix を Markdown 論文としてまとめる。ユーザーが「論文を書きたい」「論文化したい」「原稿をまとめたい」「アブストを書きたい」と言ったとき、または research-11-reproducibility の次のステップとして使うこと。
 model: opus
 ---
 
@@ -59,9 +59,9 @@ Appendix には追加実験結果・導出・再現性情報(experiment-guide.md
 ### 5. 完了処理
 
 - `research/STATUS.md` を更新
-- 次のステップ `/research-12-slide-generation`(発表資料)を案内
+- 次のステップ `/research-13-slide-generation`(発表資料)を案内
 
 ## 品質基準
 
 - 過大な主張をしない: 実験で示した範囲を超えて一般化しない
-- 限界を隠さない: 限界の正直な記述は査読対応(research-13)で自分を守る
+- 限界を隠さない: 限界の正直な記述は査読対応(research-14)で自分を守る

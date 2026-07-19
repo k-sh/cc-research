@@ -1,6 +1,6 @@
 ---
-name: research-12-slide-generation
-description: 研究発表資料の作成。論文からスライド構成・スライド本文・発表原稿・想定Q&A・デモシナリオを作成し、発表時間に合わせて調整する。ユーザーが「発表資料を作りたい」「スライドを作りたい」「学会発表の準備」「発表原稿がほしい」「想定質問を用意したい」と言ったとき、または research-11-paper-writing の次のステップとして使うこと。
+name: research-13-slide-generation
+description: 研究発表資料の作成。論文からスライド構成・スライド本文・発表原稿・想定Q&A・デモシナリオを作成し、発表時間に合わせて調整する。ユーザーが「発表資料を作りたい」「スライドを作りたい」「学会発表の準備」「発表原稿がほしい」「想定質問を用意したい」と言ったとき、または research-12-paper-writing の次のステップとして使うこと。
 argument-hint: [発表時間・発表先(例: 15分 国内会議)]
 model: sonnet
 ---
@@ -68,4 +68,4 @@ presentation/
     qa.md       # 想定 Q&A
 ```
 
-- `research/STATUS.md` を更新し、必要に応じて `/research-13-review-response` または `/research-14-release-preparation` を案内
+- `research/STATUS.md` を更新し、必要に応じて `/research-14-review-response` または `/research-15-release-preparation` を案内

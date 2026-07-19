@@ -1,6 +1,6 @@
 ---
-name: research-10-reproducibility
-description: 研究の再現性整備。実験環境・依存ライブラリ・データセット・乱数シード・学習/推論設定を整理し、第三者が再現できる状態(再現手順書・チェックリスト・Docker方針)を作る。ユーザーが「再現性を確保したい」「環境をまとめたい」「第三者が再現できるようにしたい」「実験手順書を作りたい」と言ったとき、または research-09-ablation-study の次のステップとして使うこと。
+name: research-11-reproducibility
+description: 研究の再現性整備。実験環境・依存ライブラリ・データセット・乱数シード・学習/推論設定を整理し、第三者が再現できる状態(再現手順書・チェックリスト・Docker方針)を作る。ユーザーが「再現性を確保したい」「環境をまとめたい」「第三者が再現できるようにしたい」「実験手順書を作りたい」と言ったとき、または research-10-ablation-study の次のステップとして使うこと。
 model: haiku
 ---
 
@@ -64,7 +64,7 @@ research/
 ### 6. 完了処理
 
 - `research/STATUS.md` を更新
-- 次のステップ `/research-11-paper-writing` を案内
+- 次のステップ `/research-12-paper-writing` を案内
 
 ## 品質基準
 

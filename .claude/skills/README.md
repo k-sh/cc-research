@@ -9,10 +9,10 @@
 Phase 1. Planning     research-01-planning
 Phase 2. Survey       research-02-literature-review → research-03-gap-analysis
 Phase 3. Design       research-04-method-design → research-05-patent-search → research-06-algorithm-design
-Phase 4. Development  research-07-implementation
-Phase 5. Validation   research-08-evaluation → research-09-ablation-study → research-10-reproducibility
-Phase 6. Publication  research-11-paper-writing → research-12-slide-generation / research-13-review-response
-Phase 7. Release      research-14-release-preparation
+Phase 4. Development  research-07-implementation → research-08-implementation-execution
+Phase 5. Validation   research-09-evaluation → research-10-ablation-study → research-11-reproducibility
+Phase 6. Publication  research-12-paper-writing → research-13-slide-generation / research-14-review-response
+Phase 7. Release      research-15-release-preparation
 ```
 
 順番どおりに使うのが基本だが、各スキルは前段の成果物が無い場合でも
@@ -27,13 +27,13 @@ Phase 7. Release      research-14-release-preparation
   同時に書き込むと、互いの変更を上書きして内容が消失・破損する(競合)。サブエージェントには
   調査・実行結果を回答テキスト(またはジョブごとに独立したログファイル)として返させ、
   `research/` 等へのファイル書き込みは常にスキルの実行主体が単独・逐次で行う
-  (該当箇所: `research-02-literature-review`、`research-08-evaluation`、`research-09-ablation-study`)。
+  (該当箇所: `research-02-literature-review`、`research-09-evaluation`、`research-10-ablation-study`)。
 - **実験用に書いたコードは自己レビューだけで先に進めない。** 実装者本人の見直しでは、指標の
   定義ミスやデータリークのように実行時エラーにならない不具合を見落としやすい。過去の会話
   コンテキストを渡さない独立したサブエージェントに、(1) 実装中の設計適合・バグレビュー、
   (2) 完成時のダミーデータ(成功するはずのケース/絶対に失敗するはずのケース)での妥当性検証、
   (3) 実データ適用後の結果妥当性レビュー、の3段階でレビューさせ、指摘があれば直して同じ段階を
-  やり直してから先に進む(該当箇所: `research-08-evaluation`、`research-09-ablation-study`。
+  やり直してから先に進む(該当箇所: `research-09-evaluation`、`research-10-ablation-study`。
   手順は各スキルの `references/code-review.md` を参照。`research-07-implementation` の設計に
   基づき実装に着手する場合や、他スキルの過程で結果に影響する実行可能なコードを書く場合も
   同様の考え方を適用する)。対象は結果を左右するコアロジックの新規作成・変更時に限り、瑣末な
@@ -62,6 +62,12 @@ Phase 7. Release      research-14-release-preparation
 - **ユーザーに結果の確認を依頼する際、図(グラフ・出力サンプルなど)がある場合はテキストの
   羅列だけで済ませない。** 図を埋め込んだ HTML を作成して提示する(Artifact tool が使える
   環境ならそれで公開し、無ければファイルに保存してパスを案内する)。
+- **評価は「できる限り単純な疑似データ → 実データ」の順に行い、うまくいかなければ実データに
+  居座らず、実装に戻ってから疑似データ評価に戻る**(実データにいきなり再挑戦しない)**、という
+  ループで手法の論理的な品質と実装品質の両方を上げていく**(該当箇所: `research-09-evaluation`、
+  `research-10-ablation-study`)。同じ疑似データケースが実装を直しても繰り返し失敗する場合は、
+  実装のバグではなく手法自体の論理(アルゴリズム設計)に問題がある可能性を疑い、
+  `research-04-method-design`・`research-06-algorithm-design` への差し戻しを検討する。
 
 ## 使用モデル(コスト最適化)
 
@@ -74,13 +80,14 @@ Phase 7. Release      research-14-release-preparation
 | research-05-patent-search | sonnet | 検索とクレーム比較の構造化作業 |
 | research-06-algorithm-design | opus | 数学的定式化・計算量解析の厳密さが必要 |
 | research-07-implementation | sonnet | 設計文書の作成が中心 |
-| research-08-evaluation | sonnet | 実験実行・統計処理・レポート作成 |
-| research-09-ablation-study | sonnet | 同上 |
-| research-10-reproducibility | haiku | 環境・依存関係の機械的な棚卸し |
-| research-11-paper-writing | opus | 論文の文章品質・論理構成が成果物の価値そのもの |
-| research-12-slide-generation | sonnet | 論文からの再構成作業 |
-| research-13-review-response | sonnet | コメント分類と回答文作成 |
-| research-14-release-preparation | haiku | README・カード類のテンプレート的整備 |
+| research-08-implementation-execution | sonnet | タスク実装の実行・レビュー委譲が中心 |
+| research-09-evaluation | sonnet | 実験実行・統計処理・レポート作成 |
+| research-10-ablation-study | sonnet | 同上 |
+| research-11-reproducibility | haiku | 環境・依存関係の機械的な棚卸し |
+| research-12-paper-writing | opus | 論文の文章品質・論理構成が成果物の価値そのもの |
+| research-13-slide-generation | sonnet | 論文からの再構成作業 |
+| research-14-review-response | sonnet | コメント分類と回答文作成 |
+| research-15-release-preparation | haiku | README・カード類のテンプレート的整備 |
 
 特定の実行だけモデルを変えたい場合は `claude --model opus` のようにセッションモデル側で調整するか、
 SKILL.md の `model:` フロントマターを編集する。

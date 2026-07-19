@@ -2,11 +2,11 @@
 
 研究成果(コード・モデル・データ)を公開できる状態に整えるフェーズです。
 
-## research-14-release-preparation
+## research-15-release-preparation
 
 | 項目 | 内容 |
 | --- | --- |
-| コマンド | `/research-14-release-preparation` |
+| コマンド | `/research-15-release-preparation` |
 | 使用モデル | Haiku |
 | 目的 | GitHub公開、README、モデルカード、ライセンス、リリース資料を整備する |
 

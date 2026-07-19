@@ -3,11 +3,11 @@
 提案手法の性能を統計的に信頼できる形で評価し、寄与要因を分析し、第三者が再現できる状態に
 整えるフェーズです。
 
-## research-08-evaluation
+## research-09-evaluation
 
 | 項目 | 内容 |
 | --- | --- |
-| コマンド | `/research-08-evaluation` |
+| コマンド | `/research-09-evaluation` |
 | 使用モデル | Sonnet |
 | 目的 | 評価実験を設計・実施し、ベースライン比較・統計評価・考察を行う |
 
@@ -38,7 +38,7 @@
 は既定で opus)を明示的に指定する。同じ指摘で2回連続 reject されたら、闇雲な再修正の前に
 「デバッガー」役の独立サブエージェント(root cause 調査、最大2ラウンド)を挟む。それでも
 解消しない場合はユーザーに判断を仰いで打ち切る。「直った」「うまくいった」はその場で再実行した
-新しい証拠でのみ宣言する。手順・プロンプト例は `research-08-evaluation/references/code-review.md`
+新しい証拠でのみ宣言する。手順・プロンプト例は `research-09-evaluation/references/code-review.md`
 を参照。結果をユーザーに確認してもらう際は、グラフ・出力サンプルを埋め込んだ HTML でまとめて
 提示する(Artifact tool があれば使う)。
 
@@ -54,18 +54,18 @@ research/
 
 ---
 
-## research-09-ablation-study
+## research-10-ablation-study
 
 | 項目 | 内容 |
 | --- | --- |
-| コマンド | `/research-09-ablation-study` |
+| コマンド | `/research-10-ablation-study` |
 | 使用モデル | Sonnet |
 | 目的 | アブレーション・感度分析・失敗分析により各要素の寄与を評価する |
 
 ### いつ使うか
 
 - 「アブレーションしたい」「どの要素が効いているか調べたい」「感度分析」「失敗分析」
-- `research-08-evaluation` の次のステップとして
+- `research-09-evaluation` の次のステップとして
 
 ### 主な処理
 
@@ -75,7 +75,7 @@ research/
 3. **分析**: 寄与率分析、パラメータ感度分析、学習曲線・推論時間・メモリの効率分析、
    失敗事例のエラー分析、ボトルネック分析を行う。
 
-research-08-evaluation と同様、実験コードは `references/code-review.md` の3段階の独立レビュー
+research-09-evaluation と同様、実験コードは `references/code-review.md` の3段階の独立レビュー
 (設計適合・バグ・境界チェック → ダミーデータでの妥当性検証(RED→GREEN) → 実データ適用後の
 結果妥当性)を通してから結論を確定する。「効いていない」結果はまず実装バグを疑い、統計指標
 だけでなく代表的な出力サンプルも独立レビューさせる。同じ指摘で2回連続 reject されたらデバッガー
@@ -93,18 +93,18 @@ research/
 
 ---
 
-## research-10-reproducibility
+## research-11-reproducibility
 
 | 項目 | 内容 |
 | --- | --- |
-| コマンド | `/research-10-reproducibility` |
+| コマンド | `/research-11-reproducibility` |
 | 使用モデル | Haiku |
 | 目的 | 実験環境・依存関係・データ・設定を整理し、第三者が再現できる状態にする |
 
 ### いつ使うか
 
 - 「再現性を確保したい」「環境をまとめたい」「実験手順書を作りたい」
-- `research-09-ablation-study` の次のステップとして
+- `research-10-ablation-study` の次のステップとして
 
 ### 主な処理
 
