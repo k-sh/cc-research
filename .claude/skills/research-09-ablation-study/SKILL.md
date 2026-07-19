@@ -10,7 +10,8 @@ model: sonnet
 
 ## 前提
 
-開始時に `research/STATUS.md`・`research/selected-method.md`(構成要素の分解)・`research/evaluation-report.md`・`research/experiment-results.md` を読む。
+開始時に `research/STATUS.md`・`research/selected-method.md`(構成要素の分解)・`research/evaluation-report.md`・`research/experiment-results.md`・`research/tasks.md`(あれば)を読む。
+`tasks.md` があれば `## Implementation Notes` に既知のハマりどころが無いか確認する。
 評価実験と同じデータ分割・シード・評価コードを使う(条件を変えると比較にならない)。
 
 ## 進め方

@@ -10,7 +10,8 @@ model: sonnet
 
 ## 前提
 
-開始時に `research/STATUS.md`・`research/evaluation-metrics.md`・`research/hypotheses.md`・`research/baseline-summary.md`・`research/implementation-plan.md` を読む。
+開始時に `research/STATUS.md`・`research/evaluation-metrics.md`・`research/hypotheses.md`・`research/baseline-summary.md`・`research/implementation-plan.md`・`research/tasks.md`(あれば)を読む。
+`tasks.md` があれば `## Implementation Notes` に既知のハマりどころが無いか確認する。
 実装コードの有無と実行環境を確認する。
 
 ## 進め方
