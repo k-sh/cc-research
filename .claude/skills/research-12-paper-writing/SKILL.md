@@ -1,6 +1,6 @@
 ---
-name: research-11-paper-writing
-description: 研究成果の論文化。タイトル・Abstract・Introduction・Related Work・Method・Experiments・Results・Discussion・Conclusion・References・Appendix を Markdown 論文としてまとめる。ユーザーが「論文を書きたい」「論文化したい」「原稿をまとめたい」「アブストを書きたい」と言ったとき、または research-10-reproducibility の次のステップとして使うこと。
+name: research-12-paper-writing
+description: 研究成果の論文化。タイトル・Abstract・Introduction・Related Work・Method・Experiments・Results・Discussion・Conclusion・References・Appendix を Markdown 論文としてまとめる。ユーザーが「論文を書きたい」「論文化したい」「原稿をまとめたい」「アブストを書きたい」と言ったとき、または research-11-reproducibility の次のステップとして使うこと。
 model: opus
 ---
 
@@ -54,7 +54,7 @@ Appendix には追加実験結果・導出・再現性情報(experiment-guide.md
 執筆後、査読者の視点に立って別読みで確認する。ここで見つかる問題は research-13 の査読対応で指摘される前に潰しておいた方が安い:
 
 - **主張と証拠**: 貢献の箇条書きと Results の証拠が 1:1 に対応しているか。実験で示した範囲を超えて一般化していないか
-- **引用の実在性**: 引用がすべて related-works.md に存在するか(記憶で足した引用が紛れ込んでいないか)。本文の引用キーと References の対応が過不足なく取れているか。目視だけに頼らず `python .claude/skills/research-11-paper-writing/scripts/check_citations.py research/related-works.md paper/paper.md` を実行し、related-works.md に無い URL/DOI や重複が無いことを確認する(NG が出た場合は related-works.md での実在確認、または該当引用の削除で解消してから先に進む)
+- **引用の実在性**: 引用がすべて related-works.md に存在するか(記憶で足した引用が紛れ込んでいないか)。本文の引用キーと References の対応が過不足なく取れているか。目視だけに頼らず `python .claude/skills/research-12-paper-writing/scripts/check_citations.py research/related-works.md paper/paper.md` を実行し、related-works.md に無い URL/DOI や重複が無いことを確認する(NG が出た場合は related-works.md での実在確認、または該当引用の削除で解消してから先に進む)
 - **数値の整合性**: 表・本文中の数値が experiment-results.md と一致するか。丸め方・単位が統一されているか
 - **再現性の記述**: 実装・設定(シード数、ハイパーパラメータ、環境)が Method/Experiments または Appendix から reproducibility.md を辿れるか。第三者が追試できる粒度か
 - **図表**: 軸ラベル・単位・凡例が揃っているか。図だけで(本文を読まなくても)言いたいことが伝わるか
@@ -64,9 +64,9 @@ Appendix には追加実験結果・導出・再現性情報(experiment-guide.md
 ### 5. 完了処理
 
 - `research/STATUS.md` を更新
-- 次のステップ `/research-12-slide-generation`(発表資料)を案内
+- 次のステップ `/research-13-slide-generation`(発表資料)を案内
 
 ## 品質基準
 
 - 過大な主張をしない: 実験で示した範囲を超えて一般化しない
-- 限界を隠さない: 限界の正直な記述は査読対応(research-13)で自分を守る
+- 限界を隠さない: 限界の正直な記述は査読対応(research-14)で自分を守る

@@ -1,0 +1,27 @@
+{
+  "name": "cc-research",
+  "version": "1.0.0",
+  "description": "Install the cc-research Claude Code skills (research planning through publication) into the current project",
+  "bin": {
+    "cc-research": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    ".claude/skills"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "author": "k-sh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-sh/cc-research.git"
+  },
+  "keywords": [
+    "claude-code",
+    "claude",
+    "skills",
+    "research"
+  ]
+}

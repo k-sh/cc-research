@@ -2,18 +2,18 @@
 
 研究成果を論文化し、発表資料を作成し、査読対応を行うフェーズです。
 
-## research-11-paper-writing
+## research-12-paper-writing
 
 | 項目 | 内容 |
 | --- | --- |
-| コマンド | `/research-11-paper-writing` |
+| コマンド | `/research-12-paper-writing` |
 | 使用モデル | Opus |
 | 目的 | 研究成果を論文(Markdown)としてまとめる |
 
 ### いつ使うか
 
 - 「論文を書きたい」「論文化したい」「原稿をまとめたい」「アブストを書きたい」
-- `research-10-reproducibility` の次のステップとして
+- `research-11-reproducibility` の次のステップとして
 
 ### 執筆の原則
 
@@ -40,18 +40,18 @@ paper/
 
 ---
 
-## research-12-slide-generation
+## research-13-slide-generation
 
 | 項目 | 内容 |
 | --- | --- |
-| コマンド | `/research-12-slide-generation [発表時間・発表先]` |
+| コマンド | `/research-13-slide-generation [発表時間・発表先]` |
 | 使用モデル | Sonnet |
 | 目的 | 論文から発表資料・発表原稿・想定Q&Aを作成する |
 
 ### いつ使うか
 
 - 「発表資料を作りたい」「スライドを作りたい」「学会発表の準備」「想定質問を用意したい」
-- `research-11-paper-writing` の次のステップとして
+- `research-12-paper-writing` の次のステップとして
 
 ### 主な処理
 
@@ -71,11 +71,11 @@ presentation/
 
 ---
 
-## research-13-review-response
+## research-14-review-response
 
 | 項目 | 内容 |
 | --- | --- |
-| コマンド | `/research-13-review-response [査読コメント]` |
+| コマンド | `/research-14-review-response [査読コメント]` |
 | 使用モデル | Sonnet |
 | 目的 | 査読コメントへの回答・修正履歴・再投稿資料を作成する |
 

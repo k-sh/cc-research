@@ -1,6 +1,6 @@
 ---
-name: research-10-reproducibility
-description: 研究の再現性整備。実験環境・依存ライブラリ・データセット・乱数シード・学習/推論設定を整理し、第三者が再現できる状態(再現手順書・チェックリスト・Docker方針)を作る。ユーザーが「再現性を確保したい」「環境をまとめたい」「第三者が再現できるようにしたい」「実験手順書を作りたい」と言ったとき、または research-09-ablation-study の次のステップとして使うこと。
+name: research-11-reproducibility
+description: 研究の再現性整備。実験環境・依存ライブラリ・データセット・乱数シード・学習/推論設定を整理し、第三者が再現できる状態(再現手順書・チェックリスト・Docker方針)を作る。ユーザーが「再現性を確保したい」「環境をまとめたい」「第三者が再現できるようにしたい」「実験手順書を作りたい」と言ったとき、または research-10-ablation-study の次のステップとして使うこと。
 model: haiku
 ---
 
@@ -11,7 +11,7 @@ model: haiku
 ## 前提
 
 開始時に `research/STATUS.md`・`research/experiment-results.md`・`research/implementation-plan.md`・
-`research/code-review-log.md`(あれば)を読む。
+`research/tasks.md`・`research/code-review-log.md`(あれば)を読む。
 実際の環境情報はファイルの記憶に頼らず、コマンドを実行して現物から取得する。
 
 ## 進め方
@@ -48,8 +48,9 @@ model: haiku
 
 - Dockerfile 作成方針(ベースイメージ、CUDA バージョン、依存の入れ方)。要望があれば Dockerfile 自体も作成する
 - 再現性チェックリスト: 環境固定 / シード固定 / データ入手可能 / 設定と結果の対応 / 1コマンド再現 /
-  ライセンス確認 / **実験コードの独立レビュー実施(`code-review-log.md` の有無で確認)** の各項目に
-  ✅/⬜ を付ける。レビュー未実施の項目があれば、埋めるかリスクとして明記するかをユーザーに確認する
+  ライセンス確認 / **実験コードの独立レビュー実施(`code-review-log.md` の有無で確認)** /
+  **統合検証(GO/NO-GO)が `GO` だったか(`tasks.md` で確認)** の各項目に ✅/⬜ を付ける。
+  未実施・未確認の項目があれば、埋めるかリスクとして明記するかをユーザーに確認する
 
 ### 5. 出力
 
@@ -63,7 +64,7 @@ research/
 ### 6. 完了処理
 
 - `research/STATUS.md` を更新
-- 次のステップ `/research-11-paper-writing` を案内
+- 次のステップ `/research-12-paper-writing` を案内
 
 ## 品質基準
 
