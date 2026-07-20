@@ -1,5 +1,5 @@
 ---
-name: research-13-review-response
+name: research-14-review-response
 description: 査読コメントへの対応。レビューコメントの分類・修正要否判定・Response Letter作成・修正履歴作成・反論案作成・再投稿前チェックを行う。ユーザーが「査読コメントが来た」「レビューに回答したい」「リバッタルを書きたい」「Response Letter を作りたい」「再投稿の準備」と言ったときに使うこと。
 argument-hint: [査読コメントのファイルパスまたは本文]
 model: sonnet
@@ -57,7 +57,7 @@ paper/
     paper.md              # 改訂稿(更新)
 ```
 
-- `research/STATUS.md` を更新し、採択後は `/research-14-release-preparation` を案内
+- `research/STATUS.md` を更新し、採択後は `/research-15-release-preparation` を案内
 
 ## 品質基準
 

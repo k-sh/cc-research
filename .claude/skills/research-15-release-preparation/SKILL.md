@@ -1,5 +1,5 @@
 ---
-name: research-14-release-preparation
+name: research-15-release-preparation
 description: 研究成果の公開準備。GitHub公開のためのREADME・ライセンス選定・モデルカード・データカード・CITATION.cff・リリースノート・公開チェックリストを整備する。ユーザーが「GitHubで公開したい」「OSSとしてリリースしたい」「READMEを整備したい」「モデルカードを作りたい」「公開準備」と言ったときに使うこと。
 model: haiku
 ---

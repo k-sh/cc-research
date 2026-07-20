@@ -2,7 +2,7 @@
 
 Claude Code 上で研究プロジェクトを進めるための **Skills 集**です。
 研究テーマの企画から、文献調査、手法設計、実装、評価実験、論文執筆、発表資料作成、査読対応、成果公開まで、
-研究のライフサイクル全体を 14 個のスキルとしてカバーしています。
+研究のライフサイクル全体を 15 個のスキルとしてカバーしています。
 
 ## これは何か
 
@@ -57,7 +57,7 @@ your-project/
 
 ## 全体フロー
 
-14 個のスキルは 7 つのフェーズに分かれています。詳細な説明は各フェーズのドキュメント
+15 個のスキルは 7 つのフェーズに分かれています。詳細な説明は各フェーズのドキュメント
 (`docs/skills/`)を参照してください。
 
 | Phase | スキル | 目的 |
@@ -68,14 +68,15 @@ your-project/
 | 3. Design | [research-04-method-design](docs/skills/03-design.md) | 新手法の考案・比較・採用決定 |
 | | [research-05-patent-search](docs/skills/03-design.md) | 特許・知財調査 |
 | | [research-06-algorithm-design](docs/skills/03-design.md) | アルゴリズムとしての定式化 |
-| 4. Development | [research-07-implementation](docs/skills/04-development.md) | 実装計画・アーキテクチャ設計 |
-| 5. Validation | [research-08-evaluation](docs/skills/05-validation.md) | 評価実験の設計・実施・分析 |
-| | [research-09-ablation-study](docs/skills/05-validation.md) | アブレーション・感度分析 |
-| | [research-10-reproducibility](docs/skills/05-validation.md) | 再現性の整備 |
-| 6. Publication | [research-11-paper-writing](docs/skills/06-publication.md) | 論文執筆 |
-| | [research-12-slide-generation](docs/skills/06-publication.md) | 発表資料作成 |
-| | [research-13-review-response](docs/skills/06-publication.md) | 査読対応 |
-| 7. Release | [research-14-release-preparation](docs/skills/07-release.md) | OSS 公開準備 |
+| 4. Development | [research-07-implementation-plan](docs/skills/04-development.md) | 実装計画・アーキテクチャ・タスク分解 |
+| | [research-08-implementation-execution](docs/skills/04-development.md) | タスクの実装実行・独立レビュー・統合検証 |
+| 5. Validation | [research-09-evaluation](docs/skills/05-validation.md) | 評価実験の設計・実施・分析 |
+| | [research-10-ablation-study](docs/skills/05-validation.md) | アブレーション・感度分析 |
+| | [research-11-reproducibility](docs/skills/05-validation.md) | 再現性の整備 |
+| 6. Publication | [research-12-paper-writing](docs/skills/06-publication.md) | 論文執筆 |
+| | [research-13-slide-generation](docs/skills/06-publication.md) | 発表資料作成 |
+| | [research-14-review-response](docs/skills/06-publication.md) | 査読対応 |
+| 7. Release | [research-15-release-preparation](docs/skills/07-release.md) | OSS 公開準備 |
 
 パイプラインの依存関係:
 
@@ -94,25 +95,26 @@ flowchart TD
         P06["06 algorithm-design"]
     end
     subgraph phase4["Phase 4: Development"]
-        P07["07 implementation"]
+        P07["07 implementation-plan"]
+        P08["08 implementation-execution"]
     end
     subgraph phase5["Phase 5: Validation"]
-        P08["08 evaluation"]
-        P09["09 ablation-study"]
-        P10["10 reproducibility"]
+        P09["09 evaluation"]
+        P10["10 ablation-study"]
+        P11["11 reproducibility"]
     end
     subgraph phase6["Phase 6: Publication"]
-        P11["11 paper-writing"]
-        P12["12 slide-generation"]
-        P13["13 review-response"]
+        P12["12 paper-writing"]
+        P13["13 slide-generation"]
+        P14["14 review-response"]
     end
     subgraph phase7["Phase 7: Release"]
-        P14["14 release-preparation"]
+        P15["15 release-preparation"]
     end
 
-    P01 --> P02 --> P03 --> P04 --> P05 --> P06 --> P07 --> P08 --> P09 --> P10 --> P11
-    P11 --> P12
-    P11 --> P13 --> P14
+    P01 --> P02 --> P03 --> P04 --> P05 --> P06 --> P07 --> P08 --> P09 --> P10 --> P11 --> P12
+    P12 --> P13
+    P12 --> P14 --> P15
 ```
 
 ## 使用モデルとコスト最適化
@@ -123,9 +125,9 @@ Sonnet、機械的な棚卸し作業には Haiku を割り当てています。
 
 | モデル | 該当スキル | 理由 |
 | --- | --- | --- |
-| **Opus** | 03 gap-analysis, 04 method-design, 06 algorithm-design, 11 paper-writing | 文献横断の統合・新手法の創出・数式の厳密さ・論文の論理構成など、品質が知能に強く依存する工程 |
-| **Sonnet** | 01 planning, 02 literature-review, 05 patent-search, 07 implementation, 08 evaluation, 09 ablation-study, 12 slide-generation, 13 review-response | 検索・整理・設計・実験実行など、構造化された作業が中心の工程 |
-| **Haiku** | 10 reproducibility, 14 release-preparation | 環境情報の棚卸しやテンプレート整備など、機械的な作業が中心の工程 |
+| **Opus** | 03 gap-analysis, 04 method-design, 06 algorithm-design, 12 paper-writing | 文献横断の統合・新手法の創出・数式の厳密さ・論文の論理構成など、品質が知能に強く依存する工程 |
+| **Sonnet** | 01 planning, 02 literature-review, 05 patent-search, 07 implementation-plan, 08 implementation-execution, 09 evaluation, 10 ablation-study, 13 slide-generation, 14 review-response | 検索・整理・設計・実験実行など、構造化された作業が中心の工程 |
+| **Haiku** | 11 reproducibility, 15 release-preparation | 環境情報の棚卸しやテンプレート整備など、機械的な作業が中心の工程 |
 
 特定のスキルだけモデルを変えたい場合は、該当する `SKILL.md` の `model:` を書き換えてください。
 
