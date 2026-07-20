@@ -1,6 +1,6 @@
 ---
 name: research-07-implementation-plan
-description: 研究実装の詳細設計書作成。ディレクトリ構成・モジュール設計・API/クラス設計・データ構造・学習/推論コード設計・テスト計画・CI/CD・実装優先順位・タスク分解(境界と依存関係付き)を作成する。実際にコードを書く実行フェーズは含まない(それは research-08-implementation-execution が担う)。ユーザーが「実装計画を立てたい」「アーキテクチャを設計したい」「実験コードの設計」「テスト計画を作りたい」「タスクに分解したい」と言ったとき、または research-06-algorithm-design の次のステップとして使うこと。
+description: 研究実装の詳細設計書作成。ディレクトリ構成・モジュール設計・API/クラス設計・データ構造・学習/推論コード設計・テスト計画・CI/CD・実装優先順位・タスク分解(境界と依存関係付き)を作成する。実際にコードを書く実行フェーズは含まない(それは research-08-implementation-execution が担う)。ユーザーが「実装計画を立てたい」「アーキテクチャを設計したい」「実験コードの設計」「テスト計画を作りたい」「タスクに分解したい」、あるいは単に「実装を進めたい」「実装したい」と言ったとき、または research-06-algorithm-design の次のステップとして使うこと。**`research/tasks.md` がまだ無い場合、「実装を進めたい」はまずこのスキルを指す** — いきなり research-08-implementation-execution(コードを書く実行フェーズ)には進まない。`tasks.md` が既にある状態で「次のタスクを実装したい」等、実行を指すことが明確な場合のみ research-08-implementation-execution を使う。
 model: sonnet
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: research-08-implementation-execution
-description: research-07-implementation-plan が作成した tasks.md を実際にコードとして実装する。タスクごとに独立した実装者・レビューア・デバッガーのサブエージェントを使い分け、TDD(RED→GREEN)・境界チェック・統合検証(GO/NO-GO)で実装品質を担保する。ユーザーが「実装を進めたい」「タスクを実装したい」「コードを書きたい」「実装を実行したい」「タスクを消化したい」と言ったとき、または research-07-implementation-plan の次のステップとして使うこと。
+description: research-07-implementation-plan が作成した `research/tasks.md` を実際にコードとして実装する(`tasks.md` の存在が前提)。タスクごとに独立した実装者・レビューア・デバッガーのサブエージェントを使い分け、TDD(RED→GREEN)・境界チェック・統合検証(GO/NO-GO)で実装品質を担保する。ユーザーが「タスクを実装したい」「コードを書きたい」「次のタスクを進めたい」「タスクを消化したい」と言ったとき、または research-07-implementation-plan の次のステップとして使うこと。**曖昧に「実装を進めたい」「実装したい」とだけ言われた場合、`tasks.md` が無ければ research-07-implementation-plan を先に使う** — このスキルにいきなり進まない。
 model: sonnet
 ---
 
