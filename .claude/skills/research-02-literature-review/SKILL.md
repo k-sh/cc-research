@@ -1,6 +1,6 @@
 ---
 name: research-02-literature-review
-description: 既存研究の体系的な文献調査。Google Scholar・arXiv・GitHub・企業ブログ・公式ドキュメントを調査し、関連研究の分類・比較表・ベースライン候補を research/ 配下に整理する。ユーザーが「先行研究を調べたい」「文献調査」「サーベイ」「関連研究をまとめたい」「ベースラインを探したい」と言ったとき、または research-01-planning の次のステップとして使うこと。
+description: 既存研究の体系的な文献調査。Google Scholar・arXiv・GitHub・企業ブログ・公式ドキュメントを調査し、関連研究の分類・比較表・ベースライン候補を research/ 配下に整理する。ユーザーが「先行研究を調べたい」「文献調査」「サーベイ」「関連研究をまとめたい」「ベースラインを探したい」「参考にできる論文を探したい」「参考論文はある?」と言ったとき、または research-01-planning の次のステップとして使うこと。
 argument-hint: [調査したいトピック(省略時は research-plan.md のキーワードを使用)]
 model: sonnet
 ---
