@@ -57,7 +57,7 @@ research/
 ## テーマ
 (1行)
 
-## 常に確認する情報(検討・実装の前に必ず見る)
+## 常に確認する情報(検討・実装の前に必ず見る。最終棚卸し: YYYY-MM-DD)
 - **目的**: (1〜2文。詳細: objective.md)
 - **設計思想**: (中核アイデアを1〜2文。詳細: selected-method.md / algorithm-design.md)
 - **使うと決めたツールと使い方の要点**: (箇条書き。詳細: architecture.md / oss-references.md)
