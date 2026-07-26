@@ -46,13 +46,22 @@ research/
 
 ### 3. STATUS.md の初期化
 
-`research/STATUS.md` を作成する:
+`research/STATUS.md` を作成する。**「常に確認する情報」は毎回読み返す前提の短い要約であり、
+詳細を書く場所ではない。** 詳細は元ファイル(objective.md 等)に書き、ここには「検討・実装を
+始める前にこれだけは頭に入れておく」という 1〜2 行の要点と参照先だけを置く。値が未確定な項目は
+空欄にせず「(未定)」と書く(空欄だと「決めていない」のか「書き忘れ」なのか区別できない):
 
 ```markdown
 # 研究進行状況
 
 ## テーマ
 (1行)
+
+## 常に確認する情報(検討・実装の前に必ず見る)
+- **目的**: (1〜2文。詳細: objective.md)
+- **設計思想**: (中核アイデアを1〜2文。詳細: selected-method.md / algorithm-design.md)
+- **使うと決めたツールと使い方の要点**: (箇条書き。詳細: architecture.md / oss-references.md)
+- **これまでに作り込んだバグの原因**: (箇条書き。詳細: tasks.md の Implementation Notes / code-review-log.md)
 
 ## 完了フェーズ
 - [x] 01 planning (YYYY-MM-DD) — 主要決定: ...
@@ -61,18 +70,22 @@ research/
 - [ ] 04 method-design
 - [ ] 05 patent-search
 - [ ] 06 algorithm-design
-- [ ] 07 implementation
-- [ ] 08 evaluation
-- [ ] 09 ablation-study
-- [ ] 10 reproducibility
-- [ ] 11 paper-writing
-- [ ] 12 slide-generation
-- [ ] 13 review-response
-- [ ] 14 release-preparation
+- [ ] 07 implementation-plan
+- [ ] 08 implementation-execution
+- [ ] 09 evaluation
+- [ ] 10 ablation-study
+- [ ] 11 reproducibility
+- [ ] 12 paper-writing
+- [ ] 13 slide-generation
+- [ ] 14 review-response
+- [ ] 15 release-preparation
 
 ## 未解決の論点
 - ...
 ```
+
+作成時点で埋まるのは通常「目的」だけで、他 3 項目は「(未定)」のままでよい。後続のスキルが
+決定した時点で埋めていく(詳細は `.claude/skills/README.md` の運用規約を参照)。
 
 ### 4. 完了報告
 

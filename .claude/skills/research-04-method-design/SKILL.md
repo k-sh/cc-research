@@ -66,7 +66,8 @@ research/
 
 ### 5. 完了処理
 
-- `research/STATUS.md` を更新(採用手法名と新規性の言明を記録)
+- `research/STATUS.md` を更新(採用手法名と新規性の言明を記録)。「常に確認する情報」の
+  設計思想欄に、中核アイデアの1〜2文要約を記入する
 - 次のステップとして `/research-05-patent-search`(知財確認)を案内。特許が関係しない純学術研究なら `/research-06-algorithm-design` へのスキップも提案する
 
 ## 品質基準
