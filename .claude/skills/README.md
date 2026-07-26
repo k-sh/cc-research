@@ -88,7 +88,9 @@ Phase 7. Release      research-15-release-preparation
   - **設計思想**(selected-method.md・algorithm-design.md): 中核アイデアの1〜2文要約。
     research-04(採択時)・research-06(定式化後)が更新する
   - **使うと決めたツールと使い方の要点**(architecture.md・oss-references.md): 設定管理方式、
-    参考にしたOSSの流儀など。research-07 が更新する
+    参考にしたOSSの流儀など。research-07 が更新する。決定を変える場合、architecture.md の
+    `## 変更履歴` に旧決定・新決定・理由を追記し、上書きで消さない(「使わなくなったツールの
+    使い方」を後から追えなくすることも情報の損失であり、必要になったら調べられる状態を保つ)
   - **これまでに作り込んだバグの原因**(tasks.md の Implementation Notes・code-review-log.md):
     同じ落とし穴を再び踏まないための一覧。research-08・research-09・research-10 が、
     重大なバグを特定するたびに1行で追記する
