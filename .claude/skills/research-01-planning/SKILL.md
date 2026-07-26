@@ -62,6 +62,8 @@ research/
 - **設計思想**: (中核アイデアを1〜2文。詳細: selected-method.md / algorithm-design.md)
 - **使うと決めたツールと使い方の要点**: (箇条書き。詳細: architecture.md / oss-references.md)
 - **これまでに作り込んだバグの原因**: (箇条書き。詳細: tasks.md の Implementation Notes / code-review-log.md)
+- **評価方法と結果の整理形式**: (何をもって良し悪しを判定するか1〜2文 + 結果をどのファイル形式・
+  目次構成で整理するか。詳細: evaluation-metrics.md / evaluation-report.md)
 
 ## 完了フェーズ
 - [x] 01 planning (YYYY-MM-DD) — 主要決定: ...
@@ -84,8 +86,10 @@ research/
 - ...
 ```
 
-作成時点で埋まるのは通常「目的」だけで、他 3 項目は「(未定)」のままでよい。後続のスキルが
-決定した時点で埋めていく(詳細は `.claude/skills/README.md` の運用規約を参照)。
+作成時点で埋まるのは通常「目的」と「評価方法」のうち指標定義の部分(evaluation-metrics.md
+から転記)だけで、残り(設計思想・ツールの使い方・バグの原因・結果の整理形式)は「(未定)」の
+ままでよい。後続のスキルが決定した時点で埋めていく(詳細は `.claude/skills/README.md` の
+運用規約を参照)。
 
 ### 4. 完了報告
 
