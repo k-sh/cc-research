@@ -124,7 +124,8 @@ research/
 
 ### 8. 完了処理
 
-- `research/STATUS.md` を更新
+- `research/STATUS.md` を更新。「常に確認する情報」の「使うと決めたツールと使い方の要点」欄に、
+  設定管理方式・参考にしたOSSの流儀など、以後の実装で毎回思い出す必要がある要点を記入する
 - 次のステップとして `/research-08-implementation-execution`(タスクの実装実行)を案内
 
 ## 品質基準

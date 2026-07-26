@@ -73,7 +73,8 @@ research/
 
 ### 7. 完了処理
 
-- `research/STATUS.md` を更新
+- `research/STATUS.md` を更新。「常に確認する情報」の設計思想欄を、定式化を経て
+  精緻化された内容に更新する(research-04時点の要約のままにしない)
 - 次のステップ `/research-07-implementation-plan` を案内
 
 ## 品質基準
